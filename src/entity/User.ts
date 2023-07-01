@@ -1,4 +1,5 @@
 import { Entity, ObjectIdColumn, ObjectId, Column } from "typeorm"
+import { Name } from "./Name"
 
 @Entity()
 export class User {
@@ -6,13 +7,15 @@ export class User {
     @ObjectIdColumn()
     id: ObjectId
 
-    @Column()
-    firstName: string
+    @Column(()=>Name)
+    name: Name
 
     @Column()
-    lastName: string
+    email: string
 
     @Column()
-    age: number
+    password: string
 
+    @Column("simple-array")
+    tokens: string[]
 }
