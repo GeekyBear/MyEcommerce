@@ -7,7 +7,7 @@ const {USER_NAME,PASSWORD,DBNAME} = process.env
 
 export const AppDataSource = new DataSource({
     type: "mongodb",
-    url: "" + `mongodb+srv://${USER_NAME}:${PASSWORD}@${DBNAME}.izhqqbu.mongodb.net/`+ "",
+    url:`mongodb+srv://${USER_NAME}:${PASSWORD}@${DBNAME}.izhqqbu.mongodb.net/`,
     synchronize: true,
     logging: false,
     entities: [User],
